@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 mongoose.connect(config.mongoURI, {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDB Connected...'))
-  .catch(err => console.log(err));
+  .catch(err => console.log(err)); 
 
 app.get('/', (req, res) => {
     res.send("hello world!")
@@ -29,7 +29,7 @@ app.post('/register', (req, res) => {
         })
     })
 });
-
+ 
 app.listen(port, () => {
     console.log(`${port}번 포트로 서버 가동!`);
 }); 
